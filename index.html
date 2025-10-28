@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>가짜뉴스 판별 퀴즈 · 중1</title>
+  <meta name="description" content="중학교 1학년용 가짜뉴스 이상한 점 찾기 퀴즈 (CSP-safe)">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap row">
+      <div class="brand">
+        <div class="logo">뉴</div>
+        <div>
+          <div class="title">가짜뉴스 판별 퀴즈</div>
+          <div class="subtitle">중학교 1학년 · 이상한 점 찾기형 5문항</div>
+        </div>
+      </div>
+      <div class="toolbar">
+        <button class="btn" id="printBtn" disabled title="제출 후 인쇄 가능">인쇄</button>
+        <button class="btn" id="resetBtn">다시 풀기</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="grid">
+        <article class="card">
+          <div class="h5">활동 안내</div>
+          <p class="muted">
+            아래의 짧은 기사(가짜뉴스 형태)를 읽고, <b>가장 이상하거나 믿기 어려운 점</b>을 고르세요.
+            <br>※ <b>제출하기 전에는</b> 정답·해설이 보이지 않습니다.
+          </p>
+          <div class="pair mt-12">
+            <small class="muted">진행률 <span id="progLabel">0%</span></small>
+            <small class="muted"><span id="countLabel">0</span>/5 응답</small>
+          </div>
+          <div class="progress" aria-hidden="true"><span id="progBar" style="width:0%"></span></div>
+          <div id="scoreSlot" class="muted mt-8">모든 문항 응답 후, <b>제출</b>을 누르면 결과가 공개됩니다.</div>
+          <div class="actions mt-8">
+            <button class="btn" id="submitBtn">제출하기</button>
+            <span class="muted" id="submitHint"></span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="h5">결과 요약</div>
+          <div id="summarySlot" class="muted chartSlot">제출 후 점수·역량 수준·학습 조언이 나타납니다.</div>
+        </article>
+      </section>
+
+      <section id="qMount" class="mt-16"></section>
+      <section id="explainMount" class="mt-16"></section>
+      <section id="wrongNoteMount" class="mt-16"></section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">© 2025 미디어 리터러시 · 교실 내 배포/수정 자유</div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
