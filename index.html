@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>미디어 리터러시 + 성향 통합 테스트 · 중1 (v4.2)</title>
+  <meta name="description" content="가짜뉴스 판별(5문항) + 심미/분석 성향(5문항) 통합 테스트">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap row">
+      <div class="brand">
+        <div class="logo">뉴</div>
+        <div>
+          <div class="title">미디어 리터러시 + 성향 테스트</div>
+          <div class="subtitle">중학교 1학년 · 가짜뉴스 판별(5) + 심미/분석 성향(5)</div>
+        </div>
+      </div>
+      <div class="toolbar">
+        <button class="btn" id="printBtn" disabled title="제출 후 인쇄 가능">인쇄</button>
+        <button class="btn" id="resetBtn">다시 풀기</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="grid intro">
+        <article class="card">
+          <h2 class="h5">활동 안내</h2>
+          <p class="muted">
+            A. <b>가짜뉴스 판별</b>(이상한 점 찾기 5문항) — 정답/해설은 <b>제출 후</b> 공개<br>
+            B. <b>미디어 성향</b>(심미형/분석형 5문항) — A/B 중 나와 더 가까운 것을 선택
+          </p>
+          <div class="pair mt-12" aria-live="polite">
+            <small class="muted">진행률 <span id="progLabel">0%</span></small>
+            <small class="muted"><span id="countLabel">0</span>/10 응답</small>
+          </div>
+          <div class="progress" aria-hidden="true"><span id="progBar" style="width:0%"></span></div>
+          <p id="scoreSlot" class="muted mt-8">모든 문항 응답 후, <b>제출</b>을 누르면 결과가 공개됩니다.</p>
+          <div class="actions mt-8">
+            <button class="btn primary" id="submitBtn">제출하기</button>
+            <span class="muted" id="submitHint" role="status"></span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="h5">결과 요약</h2>
+          <div id="summarySlot" class="muted chartSlot">제출 후 점수·역량 수준·성향·모둠 역할 제안이 나타납니다.</div>
+        </article>
+      </section>
+
+      <section class="mt-20">
+        <h3 class="sectionTitle">A. 가짜뉴스 판별 퀴즈 (5문항)</h3>
+        <div id="qMount" class="mt-12"></div>
+      </section>
+
+      <section class="mt-24">
+        <h3 class="sectionTitle">B. 나의 미디어 성향 테스트 (5문항)</h3>
+        <p class="muted">두 보기 중 <b>나에게 더 가까운 것</b>을 고르세요. (정답 없음)</p>
+        <div id="prefMount" class="mt-12"></div>
+      </section>
+
+      <section id="explainMount" class="mt-24"></section>
+      <section id="wrongNoteMount" class="mt-20"></section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">© 2025 미디어 리터러시 · 교실 내 배포/수정 자유 · v4.2</div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
